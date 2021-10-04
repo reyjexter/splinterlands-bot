@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  bot:
+    build: .
+    container_name: splinterlands_bot
+    ports:
+      - 10001:80
+    volumes:
+      - ${PWD}/.env:/app/.env
+    networks:
+      - splinterlands_main
+    command: npm start
+networks:
+  splinterlands_main:
