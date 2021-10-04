@@ -22,7 +22,5 @@ RUN npm install
 COPY . /app
 WORKDIR /app
 
-ENV PATH=/node_modules/.bin:$PATH
-ENV PORT=80
+CMD ["npm", "start"]
 
-EXPOSE 80

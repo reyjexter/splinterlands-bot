@@ -9,6 +9,5 @@ services:
       - ${PWD}/.env:/app/.env
     networks:
       - splinterlands_main
-    command: npm start
 networks:
   splinterlands_main:
