@@ -22,5 +22,6 @@ RUN npm install
 COPY . /app
 WORKDIR /app
 
+EXPOSE 80
 CMD ["npm", "start"]
 
