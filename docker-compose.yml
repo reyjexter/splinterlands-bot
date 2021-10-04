@@ -3,6 +3,7 @@ services:
   bot:
     build: .
     container_name: splinterlands_bot
+    image: splinterlands-bot
     ports:
       - 10001:80
     volumes:
