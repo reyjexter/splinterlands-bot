@@ -10,7 +10,7 @@ for folder in */ ; do
     cd $account_dir
     rm ./cid
     echo "Running splinterlands bot on $folder on port $external_port"
-    docker run -d -p $external_port:80 --cidfile ./cid splinterlands-bot
+    docker run -d -p $external_port:80 -v $account_dir.env:/app/.env --cidfile ./cid splinterlands-bot
     external_port=$(expr $external_port + 1)
 done
 
